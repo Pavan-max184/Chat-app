@@ -12,7 +12,7 @@ const server = http.createServer(app);
 // Configure Socket.io with CORS
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", // Update this if frontend is deployed elsewhere
+    origin: "https://ephemeral-beijinho-05f29d.netlify.app", // Update this if frontend is deployed elsewhere
     methods: ["GET", "POST"],
   },
 });

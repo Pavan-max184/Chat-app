@@ -12,7 +12,7 @@ const server = http.createServer(app);
 // Configure Socket.io with CORS
 const io = new Server(server, {
   cors: {
-    origin: "https://warm-medovik-f789bf.netlify.app", // Update this if frontend is deployed elsewhere
+    origin: "https://dashing-starlight-0eb5f0.netlify.app/", // Update this if frontend is deployed elsewhere
     methods: ["GET", "POST"],
   },
 });

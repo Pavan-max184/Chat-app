@@ -4,20 +4,17 @@ const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
 
-// Enable CORS for HTTP routes
 app.use(cors());
 
 const server = http.createServer(app);
 
-// Configure Socket.io with CORS
 const io = new Server(server, {
   cors: {
-    origin: "https://dashing-starlight-0eb5f0.netlify.app", // ✅ no trailing slash
+    origin: "https://dashing-starlight-0eb5f0.netlify.app", // ✅ no slash at end
     methods: ["GET", "POST"],
   },
 });
 
-// Socket.io events
 io.on("connection", (socket) => {
   console.log(`User Connected: ${socket.id}`);
 
@@ -35,7 +32,6 @@ io.on("connection", (socket) => {
   });
 });
 
-// Use environment PORT or fallback to 5000
 const port = process.env.PORT || 5000;
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);

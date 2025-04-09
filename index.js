@@ -12,7 +12,7 @@ const server = http.createServer(app);
 // Configure Socket.io with CORS
 const io = new Server(server, {
   cors: {
-    origin: "team-live-chat.netlify.app", // Update this if frontend is deployed elsewhere
+    origin: "https://team-live-chat.netlify.app/", // Update this if frontend is deployed elsewhere
     methods: ["GET", "POST"],
   },
 });
